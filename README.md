@@ -141,7 +141,40 @@ QA 和事件统计只使用当前 release 的 4,013 条问题，未混入旧 pip
 
 1,204 个三类齐全组中，889 组具有源标注的严格关联标记，315 组为普通上下文关联；“三类齐全”不直接等于“三题严格指向同一状态变化”。Event QA 中有 1,076 条监控区间内触发的正例和 131 条区间内未观察到条件、应保持静默的负例。
 
-## 5. 绘图与复现说明
+## 5. Queries Temporal Distribution
+
+将 **History QA、Prediction QA、Event QA 合并**，统计当前 release 全部 **4,013 条 QA** 的提问时间分布，每条 QA 计一次。时间以各视频选用片段的起点为零点：
+
+`time_since_selected_clip_start_sec = query_second - selection_start_sec`
+
+OpenDV 等裁剪片段减去选用片段起点；未裁剪视频沿用从视频开始计时。Event QA 使用问题注入时刻（`query_second`），不使用事件触发时刻或后续轮询时刻。该统计表示问题在片段中的时间位置。
+
+采用参考图中的 7 个区间，并统一为**左闭右开**：`[0, 30)`、`[30, 90)`、`[90, 180)`、`[180, 300)`、`[300, 600)`、`[600, 1200)`、`[1200, 1800)`，单位为秒。例如恰好 30 秒的提问计入 `[30, 90)`。占比的分母为 4,013。
+
+| 片段内提问时间区间（s） | QA 数量 | 占全部 QA 的比例（%） |
+| --- | ---: | ---: |
+| [0, 30) | 344 | 8.5721 |
+| [30, 90) | 432 | 10.7650 |
+| [90, 180) | 690 | 17.1941 |
+| [180, 300) | 941 | 23.4488 |
+| [300, 600) | 1158 | 28.8562 |
+| [600, 1200) | 401 | 9.9925 |
+| [1200, 1800) | 47 | 1.1712 |
+| Total | 4013 | 100.0000 |
+
+绘图时使用单个数据系列，不按 QA 类型分色或堆叠：
+
+- 横轴：**Time since selected clip start (s)**。
+- 纵轴：**Number of queries**。
+- 区间标签：`0–30, 30–90, 90–180, 180–300, 300–600, 600–1200, 1200–1800`。
+- 对应数量：`344, 432, 690, 941, 1158, 401, 47`。
+- 区间宽度不等，参考图样式应使用以区间为类别的柱状图；柱高表示数量，不表示单位时间密度。
+
+绘图数据：[Queries Temporal Distribution CSV](queries_temporal_distribution.csv)。CSV 只有合并统计，不区分三类 QA；`percentage` 的单位为百分数（0–100），不含合计行。
+
+该结果由 release 的 `model_inputs.json` 与 `episodes_metadata.json` 重新计算，校验无重复问题、无缺失片段、无区间外样本，7 个区间的数量合计为 4,013；与 release 中已有时间分箱报告的合并计数一致。
+
+## 6. 绘图与复现说明
 
 - 视频时长饼图／柱状图：使用第 3 节“视频数量”，依次为 `145, 220, 155, 58, 70, 0`；分母为 648。
 - QA 类型分布图：按 `History QA, Prediction QA, Event QA` 顺序使用 `1404, 1402, 1207`；分母为 4,013。
@@ -159,6 +192,7 @@ QA 和事件统计只使用当前 release 的 4,013 条问题，未混入旧 pip
 | --- | --- |
 | release_manifest.json | 324d561d0dd08b01a70cc65351b2e3ef5ff3119b604d7f451077fc456f266365 |
 | model_inputs.json | f1657ba66349e12570dbae7962700893e6afc7bb7f47dfba6a83af75bbfa0354 |
+| episodes_metadata.json | 52098dd95e826b9e687b6a88a7de9fd9c8bad643701b010202d0bb9f5bb384b4 |
 | event_groups.json | 36a0848e8b3053c2e264155b9b132504e5055e2717273a836a9ffeeb2ccfb72d |
 | video_catalog.json | 261e055cbba949ee91bb3e7bca34d4d1adac11c1f157ab42c18da6c231f61633 |
 | summary.json | c3c24cd41263e96b211eb7910081dc2a06d427de80bd0c9f320749f6c332d613 |

@@ -1,0 +1,7 @@
+﻿dataset,videos,selected_hours,History QA,Prediction QA,Event QA,QA_total,event_groups
+nuScenes,50,0.270361,25,10,15,50,28
+PIE,53,8.421111,167,121,200,488,206
+KITTI-360,18,2.189828,98,81,92,271,114
+BDD100K,50,0.560000,0,0,0,0,0
+Boreas,125,11.944546,108,68,106,282,129
+OpenDV-YouTube,352,76.618611,302,272,270,844,338

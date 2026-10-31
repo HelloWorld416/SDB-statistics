@@ -1,15 +1,15 @@
 ﻿category_zh,category_en,event_type,events
-车辆运动行为,Vehicle maneuvers,Turns / road bends,498
-车辆运动行为,Vehicle maneuvers,Starting / acceleration,173
-车辆运动行为,Vehicle maneuvers,Lane changes / merges,79
-车辆运动行为,Vehicle maneuvers,Stopping / deceleration,73
-交通交互与参与者状态,Road-user interactions and states,Vehicle-light changes,100
-交通交互与参与者状态,Road-user interactions and states,Passing / relative motion,86
-交通交互与参与者状态,Road-user interactions and states,Pedestrian / cyclist actions,69
-交通交互与参与者状态,Road-user interactions and states,Crossing traffic,21
-道路与场景变化,Road and scene changes,Traffic-signal changes,223
-道路与场景变化,Road and scene changes,Junction / landmark passage,51
-道路与场景变化,Road and scene changes,Road-section entry / exit,16
-长尾事件,Long-tail events,Other transitions,7
-长尾事件,Long-tail events,Visibility changes,7
-长尾事件,Long-tail events,Multiple transition types,3
+车辆运动行为,Vehicle maneuvers,Turns / road bends,229
+车辆运动行为,Vehicle maneuvers,Starting / acceleration,88
+车辆运动行为,Vehicle maneuvers,Lane changes / merges,41
+车辆运动行为,Vehicle maneuvers,Stopping / deceleration,46
+交通交互与参与者状态,Road-user interactions and states,Vehicle-light changes,55
+交通交互与参与者状态,Road-user interactions and states,Passing / relative motion,50
+交通交互与参与者状态,Road-user interactions and states,Pedestrian / cyclist actions,35
+交通交互与参与者状态,Road-user interactions and states,Crossing traffic,8
+道路与场景变化,Road and scene changes,Traffic-signal changes,101
+道路与场景变化,Road and scene changes,Junction / landmark passage,35
+道路与场景变化,Road and scene changes,Road-section entry / exit,8
+长尾事件,Long-tail events,Other transitions,2
+长尾事件,Long-tail events,Visibility changes,5
+长尾事件,Long-tail events,Multiple transition types,2

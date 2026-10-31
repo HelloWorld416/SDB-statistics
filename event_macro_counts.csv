@@ -1,5 +1,5 @@
-﻿category_zh,category_en,events,event_percentage,History QA,Prediction QA,Event QA,QA_total
-车辆运动行为,Vehicle maneuvers,823,58.5349,823,820,754,2397
-交通交互与参与者状态,Road-user interactions and states,276,19.6302,275,275,203,753
-道路与场景变化,Road and scene changes,290,20.6259,289,290,242,821
-长尾事件,Long-tail events,17,1.2091,17,17,8,42
+﻿category_zh,category_en,events,event_percentage,all_event_percentage,History QA,Prediction QA,Event QA,QA_total
+车辆运动行为,Vehicle maneuvers,404,57.305,49.5706,403,301,341,1045
+交通交互与参与者状态,Road-user interactions and states,148,20.9929,18.1595,147,119,109,375
+道路与场景变化,Road and scene changes,144,20.4255,17.6687,141,124,119,384
+长尾事件,Long-tail events,9,1.2766,1.1043,9,8,4,21

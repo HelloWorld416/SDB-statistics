@@ -1,0 +1,127 @@
+{
+  "base_commit": "8165f4b",
+  "videos": 648,
+  "hours": 100.00445718,
+  "seconds": 360016.045836,
+  "sources": [
+    {
+      "dataset": "nuScenes",
+      "videos": 50,
+      "hours": "0.270361"
+    },
+    {
+      "dataset": "PIE",
+      "videos": 53,
+      "hours": "8.421111"
+    },
+    {
+      "dataset": "KITTI-360",
+      "videos": 18,
+      "hours": "2.189828"
+    },
+    {
+      "dataset": "BDD100K",
+      "videos": 50,
+      "hours": "0.560000"
+    },
+    {
+      "dataset": "Boreas",
+      "videos": 125,
+      "hours": "11.944546"
+    },
+    {
+      "dataset": "OpenDV-YouTube",
+      "videos": 352,
+      "hours": "76.618611"
+    }
+  ],
+  "video_duration_section": "## 3. 视频时长分布：每 5 分钟一个区间\n\n区间使用**左闭右开**规则，例如 `[5, 10)` 表示 5 分钟 ≤ 时长 < 10 分钟；恰好 10 分钟的视频计入 `[10, 15)`。百分比分母为 648 个视频。各区间长度均为 5 分钟，不合并 20–25 与 25–30 分钟；当前没有达到 30 分钟的视频。\n\n| 时长区间（min） | 下界（s，含） | 上界（s，不含） | 视频数量 | 视频占比（%） | 区间累计选用时长（h） |\n| --- | --- | --- | --- | --- | --- |\n| [0, 5) | 0 | 300 | 145 | 22.3765 | 2.850398 |\n| [5, 10) | 300 | 600 | 220 | 33.9506 | 22.958698 |\n| [10, 15) | 600 | 900 | 155 | 23.9198 | 29.824556 |\n| [15, 20) | 900 | 1200 | 58 | 8.9506 | 17.314972 |\n| [20, 25) | 1200 | 1500 | 70 | 10.8025 | 27.055833 |\n| [25, 30) | 1500 | 1800 | 0 | 0.0000 | 0.000000 |\n| Total | — | — | 648 | 100.0000 | 100.004457 |\n\n### 各数据源的视频时长分布\n\n| 数据源 | [0, 5) min | [5, 10) min | [10, 15) min | [15, 20) min | [20, 25) min | [25, 30) min | 合计 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| nuScenes | 50 | 0 | 0 | 0 | 0 | 0 | 50 |\n| PIE | 1 | 14 | 38 | 0 | 0 | 0 | 53 |\n| KITTI-360 | 0 | 18 | 0 | 0 | 0 | 0 | 18 |\n| BDD100K | 50 | 0 | 0 | 0 | 0 | 0 | 50 |\n| Boreas | 44 | 68 | 7 | 6 | 0 | 0 | 125 |\n| OpenDV-YouTube | 0 | 120 | 110 | 52 | 70 | 0 | 352 |\n| Total | 145 | 220 | 155 | 58 | 70 | 0 | 648 |\n\n",
+  "event_mapping": [
+    {
+      "category_zh": "车辆运动行为",
+      "category_en": "Vehicle maneuvers",
+      "event_type": "Turns / road bends"
+    },
+    {
+      "category_zh": "车辆运动行为",
+      "category_en": "Vehicle maneuvers",
+      "event_type": "Starting / acceleration"
+    },
+    {
+      "category_zh": "车辆运动行为",
+      "category_en": "Vehicle maneuvers",
+      "event_type": "Lane changes / merges"
+    },
+    {
+      "category_zh": "车辆运动行为",
+      "category_en": "Vehicle maneuvers",
+      "event_type": "Stopping / deceleration"
+    },
+    {
+      "category_zh": "交通交互与参与者状态",
+      "category_en": "Road-user interactions and states",
+      "event_type": "Vehicle-light changes"
+    },
+    {
+      "category_zh": "交通交互与参与者状态",
+      "category_en": "Road-user interactions and states",
+      "event_type": "Passing / relative motion"
+    },
+    {
+      "category_zh": "交通交互与参与者状态",
+      "category_en": "Road-user interactions and states",
+      "event_type": "Pedestrian / cyclist actions"
+    },
+    {
+      "category_zh": "交通交互与参与者状态",
+      "category_en": "Road-user interactions and states",
+      "event_type": "Crossing traffic"
+    },
+    {
+      "category_zh": "道路与场景变化",
+      "category_en": "Road and scene changes",
+      "event_type": "Traffic-signal changes"
+    },
+    {
+      "category_zh": "道路与场景变化",
+      "category_en": "Road and scene changes",
+      "event_type": "Junction / landmark passage"
+    },
+    {
+      "category_zh": "道路与场景变化",
+      "category_en": "Road and scene changes",
+      "event_type": "Road-section entry / exit"
+    },
+    {
+      "category_zh": "长尾事件",
+      "category_en": "Long-tail events",
+      "event_type": "Other transitions"
+    },
+    {
+      "category_zh": "长尾事件",
+      "category_en": "Long-tail events",
+      "event_type": "Visibility changes"
+    },
+    {
+      "category_zh": "长尾事件",
+      "category_en": "Long-tail events",
+      "event_type": "Multiple transition types"
+    }
+  ],
+  "event_names_zh": {
+    "Turns / road bends": "转弯／沿道路弯曲行驶",
+    "Traffic-signal changes": "交通信号变化",
+    "Starting / acceleration": "起步／加速",
+    "Vehicle-light changes": "车辆灯光变化",
+    "Passing / relative motion": "会车／超越／相对运动",
+    "Lane changes / merges": "变道／汇入",
+    "Stopping / deceleration": "停车／减速",
+    "Pedestrian / cyclist actions": "行人／骑行者行为",
+    "Junction / landmark passage": "通过路口／道路标志物",
+    "Crossing traffic": "横向穿行交通",
+    "Road-section entry / exit": "道路区段进入／驶出",
+    "Other transitions": "其他变化",
+    "Visibility changes": "可见性变化",
+    "Multiple transition types": "多种变化类型"
+  }
+}

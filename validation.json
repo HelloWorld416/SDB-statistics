@@ -1,0 +1,43 @@
+{
+  "version": "StreamDriveBench-1935-v1",
+  "date": "2026-10-31",
+  "status": "passed",
+  "queries": 1935,
+  "by_family": {
+    "ETP": 683,
+    "HGI": 700,
+    "AD": 552
+  },
+  "event_groups": 815,
+  "classified_event_groups": 705,
+  "independent_negative_event_groups": 110,
+  "QA_videos": 504,
+  "video_corpus": {
+    "videos": 648,
+    "hours": 100.00445718,
+    "source_commit": "8165f4b"
+  },
+  "group_sizes": {
+    "2": 232,
+    "3": 444,
+    "1": 139
+  },
+  "strict_full_groups": 66,
+  "temporal_counts": [
+    154,
+    261,
+    317,
+    449,
+    515,
+    207,
+    32
+  ],
+  "source_sha256": {
+    "release_manifest.json": "b46cd592a3f70cdef6c0a45b77a4a475d94a3ab9970ce5526ea8d0088cdca43a",
+    "model_inputs.json": "781ae3432a87e3866e1d3e0fd08d892fbc641291f182ed3f522c294e5dc2a2d7",
+    "episodes_metadata.json": "2931b9a49d606f95ec89a041b35b4917097cf6a644b204a93b84d5c89c520ca5",
+    "event_groups.json": "55cffab78fb6038aaf492badff895a2c6865108317499d2067219a089175fba6",
+    "summary.json": "0e4cbee23d3e805758c3c4a4aba932ad2fbf959f6abac33e0d9986d84053ca8f",
+    "labels.json": "bb861cc18a4cb99098b31e5266f4f69ff825a8d97117f17d4cfdbfbfc768a9bc"
+  }
+}

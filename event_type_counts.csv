@@ -1,0 +1,16 @@
+﻿event_type,event_type_zh,events,percentage,History QA,Prediction QA,Event QA,QA_total
+Turns / road bends,转弯／沿道路弯曲行驶,229,28.0982,228,180,183,591
+Traffic-signal changes,交通信号变化,101,12.3926,100,85,93,278
+Starting / acceleration,起步／加速,88,10.7975,88,44,85,217
+Vehicle-light changes,车辆灯光变化,55,6.7485,55,39,55,149
+Passing / relative motion,会车／超越／相对运动,50,6.135,49,45,14,108
+Stopping / deceleration,停车／减速,46,5.6442,46,42,38,126
+Lane changes / merges,变道／汇入,41,5.0307,41,35,35,111
+Junction / landmark passage,通过路口／道路标志物,35,4.2945,33,31,21,85
+Pedestrian / cyclist actions,行人／骑行者行为,35,4.2945,35,27,33,95
+Crossing traffic,横向穿行交通,8,0.9816,8,8,7,23
+Road-section entry / exit,道路区段进入／驶出,8,0.9816,8,8,5,21
+Visibility changes,可见性变化,5,0.6135,5,5,0,10
+Multiple transition types,多种变化类型,2,0.2454,2,2,2,6
+Other transitions,其他变化,2,0.2454,2,1,2,5
+Verified non-triggering event,已核验未触发事件（负例补充项）,110,13.4969,0,0,110,110
